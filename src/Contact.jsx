@@ -33,7 +33,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact-section">
-      <div className="contact-wrapper">
+      <div className="contact-wrapper container">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

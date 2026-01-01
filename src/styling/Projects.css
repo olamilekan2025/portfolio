@@ -3,6 +3,7 @@
   background: #0B1123;
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 }
 
 .projects-container {

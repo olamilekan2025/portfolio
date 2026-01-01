@@ -19,7 +19,6 @@ function App() {
       <Contact />
       <Footer />
       
-      {/* Add the chat widget so it floats on all pages */}
       <ChatWidget />
     </div>
   );

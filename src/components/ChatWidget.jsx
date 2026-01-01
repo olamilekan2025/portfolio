@@ -1,42 +1,41 @@
 import React, { useState, useRef, useEffect } from "react";
-import { FaComments, FaTimes } from "react-icons/fa";
+import { FaTimes, FaComments, FaPaperPlane } from "react-icons/fa";
 import "./ChatWidget.css";
 
 const ChatWidget = () => {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]); // start empty
   const [input, setInput] = useState("");
+  const [sender, setSender] = useState("client"); // client or owner
   const chatBodyRef = useRef(null);
 
-  // Lock page scroll when chat is open
+  // Lock scroll and scroll to bottom
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+    if (chatBodyRef.current) {
+      chatBodyRef.current.scrollTop = chatBodyRef.current.scrollHeight;
     }
-
-    // Clean up on unmount
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [open]);
+  }, [isOpen, messages]);
 
-  const toggleChat = () => setOpen(!open);
+  // Send message
+  const sendMessage = () => {
+    if (!input.trim()) return;
 
-  const sendMessage = (sender = "user", text = input) => {
-    if (!text.trim()) return;
+    const newMsg = {
+      id: Date.now(),
+      sender: sender,
+      text: input.trim(),
+      time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+    };
 
-    const newMessages = [...messages, { sender, text }];
-    setMessages(newMessages);
+    setMessages((prev) => [...prev, newMsg]);
     setInput("");
 
-    // Scroll chat to bottom
-    setTimeout(() => {
-      if (chatBodyRef.current) {
-        chatBodyRef.current.scrollTop = chatBodyRef.current.scrollHeight;
-      }
-    }, 50);
+    // Optional: auto-switch sender for demonstration
+    // sender === "client" ? setSender("owner") : setSender("client");
   };
 
   const handleKeyPress = (e) => {
@@ -48,41 +47,68 @@ const ChatWidget = () => {
 
   return (
     <>
-      <div className="chat-icon" onClick={toggleChat}>
-        {open ? <FaTimes size={20} /> : <FaComments size={20} />}
-      </div>
+      {/* Floating Button */}
+      <button className="chat-float-btn" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <FaTimes size={24} /> : <FaComments size={30} />}
+        {!isOpen && <span className="chat-tooltip">Chat with me</span>}
+      </button>
 
-      {open && (
+      {/* Overlay */}
+      {isOpen && <div className="chat-overlay" onClick={() => setIsOpen(false)} />}
+
+      {/* Chat Window */}
+      {isOpen && (
         <div className="chat-window">
+          {/* Header */}
           <div className="chat-header">
-            <h4>Chat</h4>
-            <FaTimes className="close-btn" onClick={toggleChat} />
+            <div className="header-info">
+              <div className="avatar">OJ</div>
+              <div>
+                <h4>Oladunjoye Jelili</h4>
+                <span className="status">Frontend Developer</span>
+              </div>
+            </div>
+            <button onClick={() => setIsOpen(false)}>
+              <FaTimes />
+            </button>
           </div>
 
+          {/* Messages */}
           <div className="chat-body" ref={chatBodyRef}>
             {messages.length === 0 && (
               <p className="chat-empty">Start the conversation 👋</p>
             )}
-            {messages.map((msg, idx) => (
+            {messages.map((msg) => (
               <div
-                key={idx}
-                className={`chat-message ${
-                  msg.sender === "user" ? "user-msg" : "client-msg"
-                }`}
+                key={msg.id}
+                className={`message ${msg.sender === "client" ? "client-msg" : "owner-msg"}`}
               >
-                {msg.text}
+                <div className="bubble">
+                  <p>{msg.text}</p>
+                  {msg.time && <span className="time">{msg.time}</span>}
+                </div>
               </div>
             ))}
           </div>
 
-          <div className="chat-footer">
+          {/* Input */}
+          <div className="chat-input">
+            {/* Sender toggle */}
+            <select value={sender} onChange={(e) => setSender(e.target.value)}>
+              <option value="client">Client</option>
+              <option value="owner">You</option>
+            </select>
+
             <textarea
-              placeholder="Type a message..."
+              rows="1"
+              placeholder="Type your message..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyPress}
             />
-            <button onClick={() => sendMessage()}>Send</button>
+            <button onClick={sendMessage} disabled={!input.trim()}>
+              <FaPaperPlane />
+            </button>
           </div>
         </div>
       )}

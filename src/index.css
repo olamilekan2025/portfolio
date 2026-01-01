@@ -1,0 +1,35 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(/src/assets/static//Montserrat-Light.ttf);
+}
+@font-face {
+    font-family: Protext;
+    src: url(/src/assets/ProtestStrike-Regular.ttf);
+}
+/* @font-face {
+    font-family: Montserrat;
+    src: url(/src/assets/static/Montserrat-Black.ttf);
+} */
+
+h1, h2, h3, h4, h5,h6 ,p,a {
+    font-family: Montserrat;
+    font-weight: 100;
+}
+
+  span, input, select, textarea {
+    font-family: Protext;
+    font-weight: 100;
+}
+
+
+
+/* Hide scrollbar but allow scrolling */
+html, body {
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE / Edge (legacy) */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari */
+}

@@ -1,0 +1,154 @@
+/* Floating Icon */
+.chat-icon {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  background: #38bdf8;
+  color: #020617;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+.chat-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Chat Window */
+.chat-window {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  width: 90%;
+  max-width: 350px;
+  max-height: 450px;
+  background: #0f172a;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Header */
+.chat-header {
+  background: #1e293b;
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #38bdf8;
+}
+.chat-header h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+.close-btn {
+  cursor: pointer;
+}
+
+/* Body */
+.chat-body {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  scroll-behavior: smooth;
+}
+
+.chat-message {
+  padding: 0.6rem 0.9rem;
+  border-radius: 12px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.user-msg {
+  background: #38bdf8;
+  color: #020617;
+  align-self: flex-end;
+}
+
+.ai-msg {
+  background: #1e293b;
+  color: #e2e8f0;
+  align-self: flex-start;
+}
+
+/* Footer */
+.chat-footer {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  background: #162032;
+}
+
+.chat-footer textarea {
+  flex: 1;
+  resize: none;
+  border-radius: 12px;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #38bdf8;
+  background: #0f172a;
+  color: #fff;
+  font-size: 0.9rem;
+  height: 40px;
+}
+
+.chat-footer button {
+  padding: 0 1rem;
+  border-radius: 12px;
+  border: none;
+  background: #38bdf8;
+  color: #020617;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.chat-footer button:hover {
+  background: #0ea5e9;
+}
+
+/* Scrollbar */
+.chat-body::-webkit-scrollbar {
+  width: 5px;
+}
+.chat-body::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 2px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive for small screens */
+@media (max-width: 480px) {
+  .chat-window {
+    bottom: 70px;
+    right: 10px;
+    width: 95%;
+    max-width: none;
+    max-height: 400px;
+  }
+
+  .chat-footer textarea {
+    height: 35px;
+    font-size: 0.85rem;
+  }
+
+  .chat-footer button {
+    font-size: 0.85rem;
+  }
+}

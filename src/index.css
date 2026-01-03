@@ -1,24 +1,24 @@
 @font-face {
     font-family: Montserrat;
-    src: url(/src/assets/static//Montserrat-Light.ttf);
-}
-@font-face {
-    font-family: Protext;
-    src: url(/src/assets/ProtestStrike-Regular.ttf);
+    src: url(/src/assets/static/Montserrat-ExtraBold.ttf);
 }
 /* @font-face {
-    font-family: Montserrat;
-    src: url(/src/assets/static/Montserrat-Black.ttf);
+    font-family: Protext;
+    src: url(/src/assets/ProtestStrike-Regular.ttf);
 } */
+@font-face {
+    font-family: Protext;
+    src: url(/src/assets/static/Montserrat-ExtraLight.ttf);
+}
 
-h1, h2, h3, h4, h5,h6 ,p,a {
+h1, h2, h3, h4, h5,h6 ,a {
     font-family: Montserrat;
     font-weight: 100;
 }
 
-  span, input, select, textarea {
+  span, input, select, textarea ,p {
     font-family: Protext;
-    font-weight: 100;
+    /* font-weight: 100; */
 }
 
 

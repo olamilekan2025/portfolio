@@ -14,9 +14,10 @@
 .section-title {
   font-size: 3.5rem;
   font-weight: 800;
-  color: #1e293b;
+  color: #060b1d;
   margin-bottom: 1rem;
   letter-spacing: -0.05em;
+  
 }
 
 .section-subtitle {
@@ -49,9 +50,9 @@
 .category-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #0f172a;
   margin-bottom: 2rem;
   position: relative;
+  color: #38BDF8;
 }
 
 .category-title::after {

@@ -100,7 +100,7 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          <p>© {new Date().getFullYear()} <span>Oladunjoye jelil</span>. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} <span>Oladunjoye Jelili</span>. All rights reserved.</p>
           <p className="made-with">Made with passion & React</p>
         </motion.div>
       </div>

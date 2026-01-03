@@ -1,3 +1,7 @@
+
+
+
+
 import React from "react";
 import { motion } from "framer-motion";
 import "./styling/About.css";
@@ -20,16 +24,17 @@ const About = () => {
             user-focused web experiences.
           </p>
 
-          {/* Download CV Button */}
+          {/* CV Preview + Download */}
           <motion.a
-            href="/Oladunjoye_Jelil_CV.pdf"
-            download
+            href="/MY_PORTFOLIO.jpg"
+            download="Oladunjoye_Jelili_CV.jpg"
             className="cv-button"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            Download CV
+           
+            <span className="cv-text">Download CV</span>
           </motion.a>
         </motion.div>
 
@@ -45,7 +50,7 @@ const About = () => {
           >
             <h3>Who I Am</h3>
             <p>
-              My name is <strong>Oladunjoye Jelil Olamilekan</strong>, a frontend
+              My name is <strong>Oladunjoye Jelili Olamilekan</strong>, a frontend
               developer passionate about crafting responsive and visually
               engaging websites.
             </p>
@@ -98,3 +103,4 @@ const About = () => {
 };
 
 export default About;
+

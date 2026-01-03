@@ -49,7 +49,7 @@ const ChatWidget = () => {
     <>
       {/* Floating Button */}
       <button className="chat-float-btn" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <FaTimes size={24} /> : <FaComments size={30} />}
+        {isOpen ? <FaTimes size={15} /> : <FaComments size={20} />}
         {!isOpen && <span className="chat-tooltip">Chat with me</span>}
       </button>
 

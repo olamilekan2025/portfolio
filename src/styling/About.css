@@ -1,4 +1,4 @@
-/* ===== ROOT COLORS ===== */
+/* 
 :root {
   --bg: #0b1120;
   --card: #0f172a;
@@ -7,7 +7,7 @@
   --accent: #38bdf8;
 }
 
-/* ===== SECTION ===== */
+
 .about-section {
   padding: 5% 2px;
   background-color: var(--bg);
@@ -19,7 +19,6 @@
   margin: 0 auto;
 }
 
-/* ===== HEADER ===== */
 .about-header {
   text-align: left;
   margin-bottom: 3rem;
@@ -37,7 +36,6 @@
   max-width: 600px;
 }
 
-/* ===== CARD LAYOUT ===== */
 .about-content {
   display: grid;
   grid-template-columns: 1fr;
@@ -50,7 +48,6 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-/* ===== TEXT ===== */
 .about-paragraph {
   font-size: 1rem;
   line-height: 1.75;
@@ -62,7 +59,7 @@
   color: var(--accent);
 }
 
-/* ===== HIGHLIGHTS ===== */
+
 .about-highlights {
   margin: 2rem 0;
   padding: 0;
@@ -79,7 +76,7 @@
   font-size: 0.95rem;
 }
 
-/* ===== BUTTON ===== */
+
 .download-button {
   margin-top: 1.5rem;
   display: inline-flex;
@@ -105,14 +102,13 @@
   cursor: not-allowed;
 }
 
-/* ===== ERROR ===== */
+
 .download-error {
   margin-top: 0.75rem;
   color: #f87171;
   font-size: 0.9rem;
 }
 
-/* ===== CONTACT ICONS ===== */
 .about-contacts {
   margin-top: 2rem;
   display: flex;
@@ -137,9 +133,8 @@
   transform: translateY(-3px);
 }
 
-/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .text-section {
     padding: 2rem 1.5rem;
   }
-}
+}  */

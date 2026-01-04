@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion, useInView, animate } from "framer-motion";
 import "./styling/Skills.css";
 import AOS from "aos";
@@ -82,6 +83,10 @@ const SkillBar = ({ percent, name }) => {
 };
 
 const Skills = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   return (
     <section id="skills" className="skills-section">
       <div className="skills-container container">

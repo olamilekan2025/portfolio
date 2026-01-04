@@ -26,6 +26,7 @@ const Contact = () => {
         throw new Error("Submission failed");
       }
     } catch (err) {
+      console.error(err);
       setFormStatus("error");
       setMessage("Something went wrong. Please try again or email me directly.");
     }
@@ -48,7 +49,7 @@ const Contact = () => {
         </motion.div>
 
         <div className="contact-grid">
-          {/* Contact Info */}
+      
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -79,7 +80,7 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+        
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -131,7 +132,7 @@ const Contact = () => {
               </motion.button>
             </form>
 
-            {/* Feedback */}
+          
             {formStatus === "success" && (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}

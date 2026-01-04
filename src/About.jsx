@@ -11,7 +11,6 @@ const About = () => {
     <section className="about-section" id="about">
       <div className="about-container">
 
-        {/* Header */}
         <motion.div
           className="about-header"
           initial={{ opacity: 0, y: 30 }}
@@ -24,7 +23,7 @@ const About = () => {
             user-focused web experiences.
           </p>
 
-          {/* CV Preview + Download */}
+  
           <motion.a
             href="/MY_PORTFOLIO.jpg"
             download="Oladunjoye_Jelili_CV.jpg"
@@ -38,10 +37,10 @@ const About = () => {
           </motion.a>
         </motion.div>
 
-        {/* Main Content */}
+     
         <div className="about-content">
 
-          {/* Left Block */}
+         
           <motion.div
             className="about-block"
             initial={{ opacity: 0, x: -40 }}
@@ -60,7 +59,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          {/* Right Block */}
+        
           <motion.div
             className="about-block"
             initial={{ opacity: 0, x: 40 }}
@@ -80,7 +79,6 @@ const About = () => {
 
         </div>
 
-        {/* Values */}
         <motion.div
           className="about-values"
           initial={{ opacity: 0, y: 30 }}

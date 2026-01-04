@@ -14,11 +14,10 @@
 .section-title {
   font-size: 3.5rem;
   font-weight: 800;
-  color: #060b1d;
+  color: #38bdf8; /* visible accent */
   margin-bottom: 1rem;
   letter-spacing: -0.05em;
-  
-}
+} 
 
 .section-subtitle {
   font-size: 1.25rem;

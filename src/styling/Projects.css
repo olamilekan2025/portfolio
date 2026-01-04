@@ -64,21 +64,16 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-/* 
-/* .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.3);
-  display: none;
-} */
 
-/* .project-card.react:hover {
-  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.3);
-  display: none;
-} */ */
+/* Hover effect for project card */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.12);
+}
 
 .project-image-wrapper {
   overflow: hidden;
-}
+} 
 
 .project-image {
   width: 100%;
@@ -107,8 +102,7 @@
   border-radius: 4px;
   font-size: 0.75rem;
   font-weight: 700;
-  display: none;
-}
+} 
 
 .project-info h3 {
   font-size: 1.18rem;
@@ -125,7 +119,7 @@
 
 .project-buttons {
   display: flex;
-  flex-direction: column row;
+  flex-direction: row;
   gap: 0.5rem;
   margin-top: auto;
   flex-wrap: wrap;
@@ -284,6 +278,7 @@
   }
 
   .see-more-wrapper {
+    width: 70%;
     margin-top: 1.5rem;
     text-align: center;
   }

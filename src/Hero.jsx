@@ -1,186 +1,159 @@
+// import React from "react";
+// import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+// import "./styling/Hero.css";
 
+// function Hero() {
+//   return (
+//     <section className="hero" id="home">
+//       <div className="hero-container">
+//         {/* Left Content */}
+//         <div className="hero-text">
+//           <p className="hero-intro">Hi, my name is</p>
+
+//           <h1 className="hero-name">
+//             Oladunjoye <span>Jelil</span>
+//           </h1>
+
+//           <h2 className="hero-role">Frontend Developer</h2>
+
+//           <p className="hero-description">
+//             I build modern, responsive, and user-friendly web applications using
+//             HTML, CSS, JavaScript, and React. I focus on clean code, performance,
+//             and great user experience.
+//           </p>
+
+//           <div className="hero-buttons">
+//             <a href="#projects" className="btn primary">
+//               View Projects
+//             </a>
+//             <a href="#contact" className="btn secondary">
+//               Contact Me
+//             </a>
+//           </div>
+
+//           <div className="hero-socials">
+//             <a
+//               href="https://github.com/olamilekan2025"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               aria-label="GitHub"
+//             >
+//               <FaGithub />
+//             </a>
+//             <a
+//               href="https://linkedin.com/in/oladunjoye-jelil-olamilekan-1246973a3"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               aria-label="LinkedIn"
+//             >
+//               <FaLinkedin />
+//             </a>
+//             <a href="mailto:jelilioladunjoye04@gmail.com" aria-label="Email">
+//               <FaEnvelope />
+//             </a>
+//           </div>
+//         </div>
+
+//         {/* Right Image */}
+//         <div className="hero-image">
+//           <div className="image-glow"></div>
+//           <img
+//             src="https://res.cloudinary.com/divio4grm/image/upload/v1766823355/frosh_pckpyo.jpg"
+//             alt="Oladunjoye Jelili - Frontend Developer"
+//           />
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+// export default Hero;
 import React from "react";
-// eslint-disable-next-line no-unused-vars
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
-import Particles from "react-particles";
-import { loadFull } from "tsparticles";
-import { FaGithub } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
 import "./styling/Hero.css";
 
-const name = "JEL DEV";
-
-const Hero = () => {
-  const particlesInit = async (engine) => {
-    await loadFull(engine);
-  };
-
+function Hero() {
   return (
-    <section id="hero" className="hero">
-      {/* Particle Background */}
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        className="particles-canvas"
-        options={{
-          background: { color: { value: "transparent" } },
-          fpsLimit: 120,
-          interactivity: {
-            detectsOn: "window",
-            events: { resize: true },
-          },
-          particles: {
-            color: { value: "#64ffda" },
-            links: {
-              color: "#64ffda",
-              distance: 150,
-              enable: true,
-              opacity: 0.2,
-              width: 1,
-            },
-            move: {
-              enable: true,
-              speed: 1,
-              direction: "none",
-              random: false,
-              straight: false,
-            },
-            number: {
-              density: { enable: true, area: 800 },
-              value: 80,
-            },
-            opacity: { value: 0.5 },
-            shape: { type: "circle" },
-            size: { value: { min: 1, max: 3 } },
-          },
-          detectRetina: true,
-        }}
-      />
-
-      <div className="hero-content">
-        {/* Left: All Text Content */}
+    <section className="hero" id="home">
+      <div className="hero-container">
+        {/* Left Content */}
         <div className="hero-text">
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="greeting"
-          >
-            Hi, my name is
-          </motion.p>
-
-          <h1 className="hero-title">
-            {name.split("").map((char, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.08,
-                }}
-                className="letter"
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            ))}
+          <p className="hero-intro">Hi, my name is</p>
+          <h1 className="hero-name">
+            Oladunjoye <span>Jelil</span>
           </h1>
+          <h2 className="hero-role">Frontend Developer</h2>
+          <p className="hero-description">
+            I build modern, responsive, and user-friendly web applications using
+            HTML, CSS, JavaScript, and React. I focus on clean code, performance,
+            and great user experience.
+          </p>
 
-          <motion.h2
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="hero-subtitle"
-          >
-            Frontend Developer
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="hero-description"
-          >
-            I craft modern, responsive, and high-performance web experiences using
-            React. Passionate about clean code, intuitive UI/UX, and bringing ideas
-            to life.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            className="hero-buttons"
-          >
+          <div className="hero-buttons">
             <a href="#projects" className="btn primary">
-              View My Work
+              View Projects
             </a>
             <a href="#contact" className="btn secondary">
-              Get In Touch
+              Contact Me
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.5 }}
-            className="social-links"
-          >
+          <div className="hero-socials">
             <a
               href="https://github.com/olamilekan2025"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
             >
-              <FaGithub  style={{color: "#0EA5E9"}}/>
+              <FaGithub />
             </a>
-           <a
-  href="https://wa.me/2349129069652"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="WhatsApp"
->
- <FaWhatsapp style={{color: "#0EA5E9"}}/>
-</a>
-
             <a
-              href="https://twitter.com/yourusername"
+              href="https://linkedin.com/in/oladunjoye-jelil-olamilekan-1246973a3"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Twitter"
+              aria-label="LinkedIn"
             >
-             <FaXTwitter style={{color: "#0EA5E9"}}/>
+              <FaLinkedin />
             </a>
-          </motion.div>
+            <a href="mailto:jelilioladunjoye04@gmail.com" aria-label="Email">
+              <FaEnvelope />
+            </a>
+          </div>
+          
+
+
+
+          {/* Scroll Indicator: only dot animates */}
+      <a href="#projects" className="scroll-indicator" aria-label="Scroll down">
+        <div className="mouse">
+          <motion.div
+            className="wheel"
+            animate={{ y: [0, 8, 0] }}  // Dot moves up and down
+            transition={{
+              repeat: Infinity,
+              duration: 1,
+              ease: "easeInOut",
+            }}
+          />
+        </div>
+      </a>
         </div>
 
-        {/* Right: Profile Image */}
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="profile-wrapper"
-        >
-          <div className="glow-border"></div>
+        {/* Right Image */}
+        <div className="hero-image">
+          <div className="image-glow"></div>
           <img
             src="https://res.cloudinary.com/divio4grm/image/upload/v1766823355/frosh_pckpyo.jpg"
-            alt="Jel Dev - Frontend Developer"
-            className="profile-img"
+            alt="Oladunjoye Jelili - Frontend Developer"
           />
-        </motion.div>
+        </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-        className="scroll-indicator"
-      >
-        <span></span>
-      </motion.div>
+      
     </section>
   );
-};
+}
 
 export default Hero;
+

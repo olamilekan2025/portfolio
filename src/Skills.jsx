@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react";
-// eslint-disable-next-line no-unused-vars
 import { motion, useInView, animate } from "framer-motion";
 import "./styling/Skills.css";
 import AOS from "aos";

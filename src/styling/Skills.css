@@ -14,7 +14,7 @@
 .section-title {
   font-size: 3.5rem;
   font-weight: 800;
-  color: #38bdf8; /* visible accent */
+  color: #38bdf8;
   margin-bottom: 1rem;
   letter-spacing: -0.05em;
 } 
@@ -83,7 +83,7 @@
 
 .skill-item:hover {
   transform: scale(1.05);
-  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); */
+
 }
 
 .skill-label {

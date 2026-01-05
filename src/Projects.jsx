@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import "./styling/Projects.css";
 
-// Projects data
+
 const projects = [
-  // HTML/CSS Projects
+
   {
     category: "HTML/CSS",
     title: "Creativity",
@@ -56,7 +55,7 @@ const projects = [
     demo: "https://ola-print.vercel.app/",
     github: "https://github.com/olamilekan2025/todo-app",
   },
-  // React Projects
+ 
   {
     category: "React",
     title: "Bite House",

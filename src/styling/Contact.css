@@ -1,6 +1,4 @@
-/* ===============================
-   CONTACT SECTION
-================================ */
+
 .contact-section {
   padding: 120px 6%;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
@@ -15,9 +13,7 @@
   margin: 0 auto;
 }
 
-/* ===============================
-   HEADINGS
-================================ */
+
 .section-heading {
   font-size: 3.5rem;
   font-weight: 800;
@@ -35,9 +31,6 @@
   line-height: 1.6;
 }
 
-/* ===============================
-   GRID LAYOUT
-================================ */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
@@ -45,9 +38,7 @@
   align-items: start;
 }
 
-/* ===============================
-   CARDS
-================================ */
+
 .contact-info-card,
 .contact-form-card {
   background: rgba(255, 255, 255, 0.05);
@@ -65,9 +56,6 @@
   color: #38bdf8;
 }
 
-/* ===============================
-   INFO SECTION
-================================ */
 .info-description {
   color: #cbd5e1;
   margin-bottom: 2rem;
@@ -95,9 +83,6 @@
   color: #38bdf8;
 }
 
-/* ===============================
-   FORM
-================================ */
 .modern-form .form-group {
   margin-bottom: 1.5rem;
 }
@@ -151,9 +136,7 @@
   transform: none;
 }
 
-/* ===============================
-   FEEDBACK & HINTS
-================================ */
+
 .feedback {
   margin-top: 1.5rem;
   padding: 1rem 1.5rem;
@@ -181,9 +164,6 @@
   text-align: center;
 }
 
-/* ===============================
-   MOBILE RESPONSIVE
-================================ */
 @media (max-width: 640px) {
 
   .contact-section {

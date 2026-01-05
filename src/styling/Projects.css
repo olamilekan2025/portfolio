@@ -65,7 +65,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect for project card */
+
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(56, 189, 248, 0.12);

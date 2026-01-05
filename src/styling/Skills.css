@@ -24,6 +24,7 @@
   color: #64748b;
   max-width: 800px;
   margin: 0 auto 4rem;
+  
 }
 
 .skills-grid {
@@ -147,7 +148,7 @@
 @media (max-width: 640px) {
 
   .skills-section {
-    padding: 70px 1.2rem;
+    padding: 70px 0;
     min-height: auto;
   }
 
@@ -167,7 +168,7 @@
   .section-subtitle {
     font-size: 1rem;
     margin-bottom: 2.5rem;
-    padding: 0 0.5rem;
+    padding: 0;
     
   }
 
@@ -179,7 +180,7 @@
 
 
   .skill-category {
-    padding: 2rem 1.5rem;
+    padding: 2rem 0.3rem;
     border-radius: 1.25rem;
   }
 

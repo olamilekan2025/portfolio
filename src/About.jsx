@@ -77,7 +77,7 @@ const About = () => {
                 <Mail size={18} />
               </a>
               <a
-                href="https://github.com/"
+                href="https://github.com/olamilekan2025"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -85,7 +85,7 @@ const About = () => {
                 <Github size={18} />
               </a>
               <a
-                href="https://linkedin.com/"
+                href="https://linkedin.com/in/oladunjoye-jelil-olamilekan-1246973a3"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

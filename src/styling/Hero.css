@@ -130,7 +130,7 @@ width: 90%;
 
   .hero-container {
     width: 100%;
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
     gap: 2rem;
   }
@@ -213,7 +213,7 @@ width: 90%;
   border-radius: 2px;
 }
 
-/* Hover effect */
+
 .scroll-indicator:hover .mouse {
   border-color: #0ea5e9;
 }
@@ -222,10 +222,13 @@ width: 90%;
   background: #0ea5e9;
 }
 
-/* Mobile adjustments */
 @media (max-width: 768px) {
   .scroll-indicator {
+    width: 100%;
+      transform: translateX(-0%);
+      justify-content: center;
     bottom: 15px;
+    margin-top: 15px;
   }
 
   .mouse {

@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-  FaWhatsapp, 
-  FaFacebookF, 
-  FaInstagram, 
-  FaXTwitter, 
-  FaPhone, 
-  FaEnvelope 
-} from "react-icons/fa6"; 
+import {
+  FaWhatsapp,
+  FaFacebookF,
+  FaInstagram,
+  FaXTwitter,
+  FaPhone,
+  FaEnvelope,
+} from "react-icons/fa6";
 import "./styling/Footer.css";
 
 const Footer = () => {
@@ -25,7 +25,9 @@ const Footer = () => {
           <div className="footer-brand">
             <h3>Oladunjoye Jelili</h3>
             <p>Frontend Developer</p>
-            <p className="brand-tagline">Crafting modern, responsive web experiences</p>
+            <p className="brand-tagline">
+              Crafting modern, responsive web experiences
+            </p>
           </div>
 
           {/* Services */}
@@ -44,11 +46,17 @@ const Footer = () => {
             <h4>Get in Touch</h4>
             <div className="contact-item">
               <FaPhone />
-              <span>+234 912 906 9652<br />+234 707 405 2461</span>
+              <span>
+                <a href="tel:+2349129069652">+234 912 906 9652</a>
+                <br />
+                <a href="tel:+2347074052461">+234 707 405 2461</a>
+              </span>
             </div>
             <div className="contact-item">
               <FaEnvelope />
-              <a href="mailto:jelilioladunjoye04@gmail.com">jelilioladunjoye04@gmail.com</a>
+              <a href="mailto:jelilioladunjoye04@gmail.com">
+                jelilioladunjoye04@gmail.com
+              </a>
             </div>
           </div>
 
@@ -56,34 +64,34 @@ const Footer = () => {
           <div className="footer-socials">
             <h4>Connect</h4>
             <div className="social-icons">
-              <a 
-                href="https://wa.me/2349129069652" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://wa.me/2349129069652"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="WhatsApp"
               >
                 <FaWhatsapp />
               </a>
-              <a 
-                href="https://facebook.com/yourprofile" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://facebook.com/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
               >
                 <FaFacebookF />
               </a>
-              <a 
-                href="https://instagram.com/yourusername" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://instagram.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
               >
                 <FaInstagram />
               </a>
-              <a 
-                href="https://x.com/yourusername" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://x.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="X (Twitter)"
               >
                 <FaXTwitter />
@@ -100,7 +108,10 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          <p>© {new Date().getFullYear()} <span>Oladunjoye Jelili</span>. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} <span>Oladunjoye Jelili</span>. All
+            rights reserved.
+          </p>
           <p className="made-with">Made with passion & React</p>
         </motion.div>
       </div>

@@ -75,7 +75,7 @@ function Hero() {
         <div className="hero-image">
           <div className="image-glow"></div>
           <img
-            src="https://res.cloudinary.com/divio4grm/image/upload/v1766823355/frosh_pckpyo.jpg"
+            src="https://res.cloudinary.com/divio4grm/image/upload/v1767774450/WhatsApp_Image_2026-01-06_at_23.15.52_rt9mhf.jpg"
             alt="Oladunjoye Jelili - Frontend Developer"
           />
         </div>

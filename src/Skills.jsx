@@ -45,6 +45,12 @@ const skillCategories = [
         desc: "API testing & debugging",
         percent: 75,
       },
+      {
+        name: "Tailwind CSS",
+        level: "Expert",
+        desc: "Flexbox, Grid, responsive design",
+        percent: 90,
+      },
     ],
   },
 ];

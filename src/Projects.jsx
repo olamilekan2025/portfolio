@@ -86,6 +86,16 @@ const projects = [
     demo: "https://netflix-fawn-mu.vercel.app/",
     github: "https://github.com/olamilekan2025/todo-app",
   },
+  {
+    category: "React",
+    title: "Pearly Gate",
+    description:
+"Our school provides a nurturing environment where students learn, grow, and succeed. We are dedicated to academic excellence, character development, and preparing students for a bright future.",
+    image:
+      "https://res.cloudinary.com/divio4grm/image/upload/v1772949339/WhatsApp_Image_2026-03-08_at_06.50.40_ewemzl.jpg",
+    demo: "https://pearly-gate.vercel.app/",
+    github: "https://github.com/olamilekan2025",
+  },
 ];
 
 const Projects = () => {
